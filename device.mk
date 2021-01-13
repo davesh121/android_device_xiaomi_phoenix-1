@@ -37,6 +37,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
+    
+# ANXCamera
+$(call inherit-product-if-exists, vendor/ANXCamera/config.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -63,7 +66,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+    Snap
 
 PRODUCT_PACKAGES += \
 	libmedia_jni_shim
